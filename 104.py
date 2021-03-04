@@ -7,7 +7,6 @@ import os
 
 class OHF(unittest.TestCase):
     def setUp(self):
-        # self.driver = webdriver.Chrome()
         opts = Options()
         opts.add_argument('--headless')
         opts.add_argument('--disable-gpu')
