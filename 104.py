@@ -9,6 +9,10 @@ class OHF(unittest.TestCase):
     def setUp(self):
         # self.driver = webdriver.Chrome()
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
+        ChromeOptions options =  ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--headless");
         # cap = DesiredCapabilities().INTERNETEXPLORER
         # cap['nativeEvents'] = False
         # cap['ignoreProtectedModeSettings'] = True
@@ -18,7 +22,7 @@ class OHF(unittest.TestCase):
         # self.driver = webdriver.Ie(capabilities=cap)
         self.driver.get('https://www.104.com.tw/jobs/main/')
         self.driver.maximize_window()
-        self.driver.get_screenshot_as_file('D://test_104_home.png')
+        # self.driver.get_screenshot_as_file('D://test_104_home.png')
 
     def tearDown(self):
         self.driver.quit()
@@ -32,7 +36,7 @@ class OHF(unittest.TestCase):
         self.driver.find_element_by_id('submitBtn').click()
         time.sleep(3)
         self.driver.find_element_by_xpath('//*[@id="global_bk"]/ul/li[2]/ul/li[5]/a').is_displayed()
-        self.driver.get_screenshot_as_file('D://test_104_login.png')
+        # self.driver.get_screenshot_as_file('D://test_104_login.png')
 
     #login test
     def test_01(self):
