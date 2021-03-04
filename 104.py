@@ -9,10 +9,6 @@ class OHF(unittest.TestCase):
     def setUp(self):
         # self.driver = webdriver.Chrome()
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        ChromeOptions options =  ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");
         # cap = DesiredCapabilities().INTERNETEXPLORER
         # cap['nativeEvents'] = False
         # cap['ignoreProtectedModeSettings'] = True
