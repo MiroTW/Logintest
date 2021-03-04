@@ -19,6 +19,7 @@ class OHF(unittest.TestCase):
 
     #login test
     def test(self):
+        USERNAME = process.env.get('USERNAME')
         self.driver.find_element_by_xpath('//*[@id="global_bk"]/ul/li[2]/ul/li[6]/a').click()
         self.driver.find_element_by_id('username').send_keys(USERNAME)
         self.driver.find_element_by_id('password').send_keys(PASSWORD)
