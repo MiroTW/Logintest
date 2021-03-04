@@ -1,12 +1,14 @@
 import unittest
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class OHF(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(ChromeDriverManager().install())
         # cap = DesiredCapabilities().INTERNETEXPLORER
         # cap['nativeEvents'] = False
         # cap['ignoreProtectedModeSettings'] = True
