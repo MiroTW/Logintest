@@ -10,7 +10,8 @@ on:
     branches: [ master ]
 
 jobs:
-  bulid:
+  test:
+    name: Running Units Tests
     runs-on: windows-latest
 
     steps:
