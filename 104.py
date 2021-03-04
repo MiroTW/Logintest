@@ -34,7 +34,7 @@ class OHF(unittest.TestCase):
         self.driver.find_element_by_id('username').send_keys(username)
         self.driver.find_element_by_id('password').send_keys(password)
         self.driver.find_element_by_id('submitBtn').click()
-        time.sleep(3)
+        time.sleep(10)
         self.driver.find_element_by_xpath('//*[@id="global_bk"]/ul/li[2]/ul/li[5]/a').is_displayed()
         # self.driver.get_screenshot_as_file('D://test_104_login.png')
 
