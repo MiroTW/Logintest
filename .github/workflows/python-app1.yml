@@ -26,4 +26,4 @@ jobs:
         #pip install -r requirements.txt
     - name: Test
       run:
-        python Muti_testcase_reoprt.py
+        python 104.py
