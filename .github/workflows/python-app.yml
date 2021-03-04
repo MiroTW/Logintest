@@ -10,8 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  test:
-    name: Running Units Tests
+  bulid:
     runs-on: ubuntu-latest
 
     steps:
