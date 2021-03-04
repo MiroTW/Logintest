@@ -1,13 +1,14 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
 name: Python application
 
 on:
+  # push 到 master 分支時會觸發
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+    - master
+  # 排程每天 UTC 16:30 (台灣時間 0:30) 時觸發
+  # 語法可上 crontab.guru 查詢
+  schedule:
+  - cron: 30 16 * * *
 
 jobs:
   build:
