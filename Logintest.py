@@ -23,7 +23,7 @@ class OHF(unittest.TestCase):
         self.driver.find_element_by_id('username').send_keys(os.environ['USERNAME'])
         self.driver.find_element_by_id('password').send_keys(os.environ['PASSWORD'])
         self.driver.find_element_by_id('submitBtn').click()
-        await time.sleep(10)
+        time.sleep(10)
         self.driver.find_element_by_xpath('//*[@id="global_bk"]/ul/li[2]/ul/li[5]/a').is_displayed()
 
 if __name__ == '__main__':
