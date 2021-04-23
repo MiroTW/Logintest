@@ -10,7 +10,7 @@ class OHF(unittest.TestCase):
         opts = Options()
         opts.add_argument('--headless')
         opts.add_argument('--disable-gpu')
-        self.driver = webdriver.Chrome(chrome_options=opts)
+        self.driver = webdriver.Chrome(chrome_options=opts, executable_path='./chromedriver.exe')
         self.driver.get('https://www.104.com.tw/jobs/main/')
         self.driver.maximize_window()
 
