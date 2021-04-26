@@ -16,7 +16,7 @@ class OHF(unittest.TestCase):
 #         opts.add_argument("--no-sandbox")
 #         opts.add_argument("--disable-dev-shm-usage")
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=opts)
-        self.driver.get('https://www.104.com.tw/jobs/main/')
+        self.driver.get('https://signin.104.com.tw/')
 #         self.driver.maximize_window()
 
     def tearDown(self):
@@ -27,7 +27,7 @@ class OHF(unittest.TestCase):
         time.sleep(10)
 #         self.driver.find_element_by_xpath('/html/body/div[1]/div/div/ul/li[2]/ul/li[6]/a').click()
 #         self.driver.find_element_by_xpath('//*[@id="global_bk"]/ul/li[2]/ul/li[6]/a').click()
-        self.driver.find_element_by_xpath('//*[@class="right"]/ul/li[6]/a').click()
+#         self.driver.find_element_by_xpath('//*[@class="right"]/ul/li[6]/a').click()
         self.driver.find_element_by_id('username').send_keys(os.environ['USERNAME'])
         self.driver.find_element_by_id('password').send_keys(os.environ['PASSWORD'])
         self.driver.find_element_by_id('submitBtn').click()
