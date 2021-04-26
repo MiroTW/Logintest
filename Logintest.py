@@ -8,7 +8,7 @@ import os
 
 class OHF(unittest.TestCase):
     def setUp(self):
-#         warnings.simplefilter('ignore', ResourceWarning)
+        warnings.simplefilter('ignore', ResourceWarning)
         opts = Options()
 #         opts.add_argument('--headless')
 #         opts.add_argument('--disable-gpu')
