@@ -10,7 +10,7 @@ class OHF(unittest.TestCase):
     def setUp(self):
         warnings.simplefilter('ignore', ResourceWarning)
         opts = Options()
-        opts.add_argument('--headless')
+#         opts.add_argument('--headless')
         opts.add_argument('--disable-gpu')
         opts.add_argument("--no-sandbox")
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=opts)
