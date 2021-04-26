@@ -17,14 +17,14 @@ class OHF(unittest.TestCase):
 #         opts.add_argument("--disable-dev-shm-usage")
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=opts)
         self.driver.get('https://www.104.com.tw/jobs/main/')
-        self.driver.maximize_window()
+#         self.driver.maximize_window()
 
     def tearDown(self):
         self.driver.quit()
 
     #login test
     def test(self):
-        time.sleep(10)
+        time.sleep(30)
         self.driver.find_element_by_xpath('/html/body/div[1]/div/div/ul/li[2]/ul/li[6]/a').click()
 #         self.driver.find_element_by_xpath('//*[@id="global_bk"]/ul/li[2]/ul/li[6]/a').click()
         self.driver.find_element_by_id('username').send_keys(os.environ['USERNAME'])
