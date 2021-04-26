@@ -25,8 +25,8 @@ class OHF(unittest.TestCase):
     #login test
     def test(self):
         time.sleep(30)
-        self.driver.find_element_by_xpath('/html/body/div[1]/div/div/ul/li[2]/ul/li[6]/a').click()
-#         self.driver.find_element_by_xpath('//*[@id="global_bk"]/ul/li[2]/ul/li[6]/a').click()
+#         self.driver.find_element_by_xpath('/html/body/div[1]/div/div/ul/li[2]/ul/li[6]/a').click()
+        self.driver.find_element_by_xpath('//*[@id="global_bk"]/ul/li[2]/ul/li[6]/a').click()
         self.driver.find_element_by_id('username').send_keys(os.environ['USERNAME'])
         self.driver.find_element_by_id('password').send_keys(os.environ['PASSWORD'])
         self.driver.find_element_by_id('submitBtn').click()
