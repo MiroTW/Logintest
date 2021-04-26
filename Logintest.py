@@ -8,10 +8,10 @@ import os
 
 class OHF(unittest.TestCase):
     def setUp(self):
-        warnings.simplefilter('ignore', ResourceWarning)
+#         warnings.simplefilter('ignore', ResourceWarning)
         opts = Options()
 #         opts.add_argument('--headless')
-        opts.add_argument('--disable-gpu')
+#         opts.add_argument('--disable-gpu')
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=opts)
         self.driver.get('https://www.104.com.tw/jobs/main/')
         self.driver.maximize_window()
